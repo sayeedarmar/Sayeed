@@ -34,16 +34,25 @@
     min-height: 100vh;
     color: var(--ink);
     font: 400 1.05rem/1.6 var(--body);
-    /* ledger paper: ruled lines plus a margin line */
+    /* ledger paper: ruled lines */
     background:
-      linear-gradient(to right, transparent 2.6rem, var(--accent) 2.6rem, var(--accent) calc(2.6rem + 1px), transparent calc(2.6rem + 1px)),
       repeating-linear-gradient(to bottom, transparent 0, transparent 2rem, var(--rule) 2rem, var(--rule) calc(2rem + 1px));
     background-color: var(--paper);
   }
   main {
+    position: relative;
+    min-height: 100vh;
     max-width: 30rem;
     margin: 0 auto;
     padding: 3.5rem 1.25rem 3rem 4.1rem;
+  }
+  /* ledger margin line */
+  main::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 2.6rem;
+    width: 1px;
+    background: var(--accent);
   }
   h1 {
     font: 800 clamp(3rem, 15vw, 4.5rem)/0.95 var(--display);
@@ -86,38 +95,69 @@
     a.link:hover { transform: none; }
   }
   .bio.interests { margin-bottom: 2.25rem; }
+
+  /* Tablet */
+  @media (min-width: 640px) {
+    main { max-width: 40rem; padding: 5rem 2rem 4rem 5rem; }
+    main::before { left: 3.2rem; }
+    .bio { font-size: 1.1rem; }
+  }
+  /* Desktop: intro on the left, details on the right */
+  @media (min-width: 960px) {
+    main {
+      max-width: 74rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      column-gap: 5rem;
+      align-items: start;
+      padding: 7rem 3rem 4rem 6rem;
+    }
+    main::before { left: 3.6rem; }
+    .intro { position: sticky; top: 6rem; }
+    h1 { font-size: clamp(4.5rem, 7vw, 6.5rem); }
+    .role { font-size: 1.35rem; }
+    .bio { font-size: 1.15rem; max-width: 36rem; }
+    .side { padding-top: 0.6rem; }
+    footer { grid-column: 1 / -1; margin-top: 4rem; }
+  }
 </style>
 </head>
 <body>
 <main>
-  <h1>Sayeed</h1>
-  <p class="role">Founder's office at Bulkaroma, Chennai</p>
-  <p class="bio">
-    I now work in the <strong>founder's office at Bulkaroma</strong>.
-    My work spans <strong>finance, operations and 0-to-1 building</strong>.
-    I handled financial operations at <strong>National Durbar</strong>, my family's
-    restaurant, where I digitised sales tracking and ran reconciliation and
-    reporting. I also built a 3D-printed merchandise store on my own and made
-    <strong>&#8377;60,000 in profit in three months</strong>.
-    I'm a BCom (Accounting and Finance) graduate from Jain University and I've
-    cleared CA Foundation.
-  </p>
+  <header class="intro">
+    <h1>Sayeed</h1>
+    <p class="role">Founder's office at Bulkaroma, Chennai</p>
+    <p class="bio">
+      I'm in the <strong>founder's office at Bulkaroma</strong>, working across
+      <strong>finance, operations and building new things from zero</strong>.
+      Before this, I handled the financial side of <strong>National Durbar</strong>,
+      my family's restaurant, where I moved sales tracking from paper to tablet and
+      ran reconciliation and reporting. I also built a 3D-printed merchandise store
+      on my own and made <strong>&#8377;60,000 in profit in three months</strong>.
+      My first build was in school: I designed and ran a clothing group on Roblox
+      and sold it for <strong>&#8377;30,000</strong>.
+      I'm a BCom (Accounting and Finance) graduate from Jain University and I've
+      cleared CA Foundation.
+    </p>
+  </header>
 
-  <h2>Interests</h2>
-  <p class="bio interests">
-    Outside work I'm usually building, solving or riding something. I 3D print
-    and tinker with a Raspberry Pi, work through puzzles, go on long bike rides,
-    keep fish, explore perfumes and game.
-  </p>
-  
-  <h2>Get in touch</h2>
-  <ul>
-    <li><a class="link" href="mailto:Mdsayeedarmar2005@gmail.com">Email <span>Mdsayeedarmar2005@gmail.com</span></a></li>
-    <li><a class="link" href="https://wa.me/918110907770" target="_blank" rel="noopener">WhatsApp <span>+91 81109 07770</span></a></li>
-    <li><a class="link" href="https://www.instagram.com/sayeedarmar/" target="_blank" rel="noopener">Instagram <span>@sayeedarmar</span></a></li>
-    <li><a class="link" href="https://www.instagram.com/kanyebhaiye/" target="_blank" rel="noopener">3D prints <span>@kanyebhaiye</span></a></li>
-    <li><a class="link" href="https://www.linkedin.com/in/sayeed-armar-a5926b278" target="_blank" rel="noopener">LinkedIn <span>Connect with me</span></a></li>
-  </ul>
+  <div class="side">
+    <h2>Interests</h2>
+    <p class="bio interests">
+      Outside work I'm usually building, solving or riding something. I 3D print
+      and tinker with a Raspberry Pi, work through puzzles, go on long bike rides,
+      keep fish, explore perfumes and game.
+    </p>
+
+    <h2>Get in touch</h2>
+    <ul>
+      <li><a class="link" href="mailto:Mdsayeedarmar2005@gmail.com">Email <span>Mdsayeedarmar2005@gmail.com</span></a></li>
+      <li><a class="link" href="https://wa.me/918110907770" target="_blank" rel="noopener">WhatsApp <span>+91 81109 07770</span></a></li>
+      <li><a class="link" href="https://www.instagram.com/sayeedarmar/" target="_blank" rel="noopener">Instagram <span>@sayeedarmar</span></a></li>
+      <li><a class="link" href="https://www.instagram.com/kanyebhaiye/" target="_blank" rel="noopener">3D prints <span>@kanyebhaiye</span></a></li>
+      <li><a class="link" href="https://www.linkedin.com/in/sayeed-armar-a5926b278" target="_blank" rel="noopener">LinkedIn <span>Connect with me</span></a></li>
+    </ul>
+  </div>
 
   <footer>&copy; <span id="y">2026</span> Armar Intelligence AI</footer>
 </main>
