@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sayeed Armar | Founder’s Office, Builder</title>
+<meta name="description" content="Sayeed Armar works in the founder’s office at Bulkaroma. He researches ideas, tests if they work, and builds the tools to run them.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Sayeed Armar | Founder’s Office, Builder">
+<meta property="og:description" content="I research ideas, figure out if they’re possible, and then build them.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238A1230'/><text x='50' y='70' font-size='60' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--paper:#000;--ink:#F4EAEB;--muted:#A99699;--line:#2B1217;--red:#8A1230;--acc:#E0566D;--hero:#B81D3D;--tint:#14070A;--on-red:#fff;
+--display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font:800 clamp(1.9rem,5vw,2.9rem)/1.05 var(--display);letter-spacing:-.02em;margin-bottom:12px}
+.lede{color:var(--muted);max-width:56ch;margin-bottom:32px}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 1.2rem var(--display);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--red);color:var(--on-red);font-style:normal;font-size:1rem}
+nav ul{display:flex;gap:4px;list-style:none;padding:0;overflow-x:auto}
+nav ul a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted)}
+nav ul a:hover,nav ul a.on{background:var(--tint);color:var(--acc)}
+/* hero */
+.hero{padding:56px 0 40px}
+.hero h1{font:800 clamp(3.4rem,13vw,9rem)/.88 var(--display);letter-spacing:-.04em;color:var(--hero);margin-bottom:24px;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.role{font:500 clamp(1.1rem,2.6vw,1.5rem)/1.3 var(--display);margin-bottom:16px}
+.hero p.about{max-width:60ch;color:var(--muted);margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--red);background:none;color:var(--acc);font-family:var(--body);font-size:1rem;cursor:pointer}
+.btn.fill{border-color:var(--hero);background:var(--red);color:var(--on-red)}
+.btn:hover{transform:translateY(-2px)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:18px;border:2px solid var(--line);background:var(--paper);transition:background .2s,color .2s,border-color .2s}
+.stat b{font:800 clamp(1.7rem,4vw,2.5rem)/1 var(--display);letter-spacing:-.02em;color:var(--acc)}
+.stat span{font-size:.92rem;color:var(--muted)}
+.stat:hover{border-color:var(--acc)}
+.stat[aria-pressed=true]{background:var(--red);border-color:var(--red)}
+.stat[aria-pressed=true] b,.stat[aria-pressed=true] span{color:var(--on-red)}
+.stat:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+#statnote{margin-top:14px;min-height:3.4em;padding:14px 18px;border-left:4px solid var(--hero);background:var(--tint);border-radius:0 12px 12px 0}
+/* built */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:22px;border:2px solid var(--line);border-radius:18px}
+.card h3{font:800 1.3rem/1.15 var(--display);margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
+.card h3 s{text-decoration:none;color:var(--acc);transition:transform .2s}
+.card p{color:var(--muted);font-size:.98rem}
+.card .more{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--ink)}
+.card[aria-expanded=true]{border-color:var(--acc)}
+.card[aria-expanded=true] .more{display:block}
+.card[aria-expanded=true] h3 s{transform:rotate(45deg)}
+.card:hover{border-color:var(--acc)}
+.card:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+/* journey */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tab{min-height:42px;padding:0 18px;border-radius:999px;border:2px solid var(--line);background:none;color:var(--ink);font:500 .98rem var(--body);cursor:pointer}
+.tab[aria-pressed=true]{background:var(--red);border-color:var(--red);color:var(--on-red)}
+.tl{list-style:none;padding:0;border-left:3px solid var(--hero);margin-left:6px}
+.tl li{padding:0 0 30px 24px;position:relative}
+.tl li::before{content:"";position:absolute;left:-10px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--paper);border:4px solid var(--hero)}
+.tl time{font-size:.9rem;color:var(--acc);font-weight:700}
+.tl h3{font:800 1.35rem/1.2 var(--display);margin:2px 0 2px}
+.tl .org{color:var(--muted);font-size:.98rem;margin-bottom:8px}
+.tl ul{padding-left:18px;max-width:70ch}
+.tl ul li{padding:0 0 6px;border:0}
+.tl ul li::before{display:none}
+.tl[hidden],.tl li[hidden]{display:none}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.skill{padding:20px;border-radius:18px;background:var(--tint)}
+.skill h3{font:800 1.1rem var(--display);margin-bottom:10px;color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0}
+.chips li{padding:4px 12px;border-radius:999px;background:var(--paper);font-size:.9rem;border:1px solid var(--line)}
+.beyond{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-top:8px}
+.beyond li{padding:8px 16px;border:2px solid var(--line);border-radius:999px}
+.langs{margin-top:24px;color:var(--muted)}
+/* contact */
+.contact{background:var(--red);color:var(--on-red);border-radius:28px;padding:clamp(28px,6vw,64px);margin-bottom:56px}
+.contact h2{color:var(--on-red)}
+.contact p{max-width:50ch;margin-bottom:24px;opacity:.92}
+.contact .btn{border-color:var(--on-red);color:var(--on-red)}
+.contact .btn.fill{background:var(--on-red);color:#5A0C1F}
+footer{padding:0 0 40px;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}section{padding:52px 0}.hero{padding-top:36px}nav ul a{padding:8px 9px;font-size:.88rem}.logo span{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top"><i>S</i><span>Sayeed Armar</span></a>
+<ul>
+<li><a href="#built">Built</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav></div></header>
+
+<main id="top">
+<div class="wrap hero">
+<h1>Sayeed<br>Armar</h1>
+<p class="role">Founder’s Office · Entrepreneur in Residence · Executive Office</p>
+<p class="about">I’m a curious person who picks up things quickly. At Bulkaroma I work in the founder’s office, directly with the founder. I research ideas, figure out if they’re possible, and then build them. I use Claude to turn ideas into working tools without a dev team.</p>
+<div class="btns">
+<a class="btn fill" href="mailto:Sayeed.armar@gmail.com">Email me</a>
+<a class="btn" href="RedARMARresume.pdf" download>Download resume</a>
+</div>
+<div class="stats" id="stats" role="group" aria-label="Numbers. Tap one for the story.">
+<button class="stat" aria-pressed="false" data-i="0"><b>1,000+</b><span>materials mapped in my QR inventory app</span></button>
+<button class="stat" aria-pressed="false" data-i="1"><b>Rs. 60,000</b><span>profit from a self-funded venture</span></button>
+<button class="stat" aria-pressed="false" data-i="2"><b>10%</b><span>of inbound leads became customers</span></button>
+<button class="stat" aria-pressed="false" data-i="3"><b>Rs. 30,000</b><span>Roblox brand sold while in school</span></button>
+</div>
+<p id="statnote" aria-live="polite">Tap a number to see how it happened.</p>
+</div>
+
+<section id="built"><div class="wrap">
+<h2>Things I’ve built</h2>
+<p class="lede">Tap a card to open it.</p>
+<div class="cards" id="cards"></div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+<h2>Journey</h2>
+<p class="lede">From a Roblox clothing group in 2020 to the founder’s office today.</p>
+<div class="tabs" id="tabs" role="group" aria-label="Filter journey"></div>
+<ul class="tl" id="tl"></ul>
+<h3 style="font:800 1.35rem var(--display);margin-top:8px">Education</h3>
+<p style="margin-top:6px"><b>B.Com (Accounting &amp; Finance)</b>, JAIN (Deemed-to-be University), Bengaluru. CGPA 8.0/10, Jul 2026.</p>
+<p>Class 12, Sana Model CBSE School, 82% overall. 95% in Economics, the highest in the school.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills &amp; tools</h2>
+<div class="skills" id="skillgrid"></div>
+<p class="langs"><b>Languages:</b> English, Hindi/Urdu, Tamil, Nawayathi</p>
+<h3 style="font:800 1.35rem var(--display);margin-top:36px">Beyond work</h3>
+<p class="lede" style="margin:6px 0 12px">Building things is the hobby too.</p>
+<ul class="beyond"><li>3D printing</li><li>DIY electronics</li><li>Custom RC aircraft</li><li>Long-distance motorcycle touring</li><li>Horse riding</li><li>Animal care</li><li>Aquariums</li><li>Puzzles &amp; Rubik’s Cubes</li><li>Online gaming</li></ul>
+</div></section>
+
+<div class="wrap" id="contact">
+<div class="contact">
+<h2>Let’s build something</h2>
+<p>Hiring for a founder’s office role, or have an operations problem that needs a working tool? Write to me.</p>
+<div class="btns" style="margin:0">
+<a class="btn fill" href="mailto:Sayeed.armar@gmail.com">Sayeed.armar@gmail.com</a>
+<a class="btn" href="tel:+918110907770">Call 8110907770</a>
+<button class="btn" id="copy" type="button">Copy email</button>
+</div>
+</div>
+</div>
+</main>
+<footer><div class="wrap">Sayeed Armar · Chennai, India</div></footer>
+
+<script>
+var stats=[
+"I built a QR-code inventory app for Bulkaroma. Every rack and bottle has a code, so anyone can find where a material is stored and verify stock.",
+"I ran a 3D-printed merchandise store alone from March to May 2026. I handled product, pricing, marketing, fulfilment and finance, with no outside funding.",
+"Paid and organic traffic from Meta Ads, Reddit and WhatsApp. I tracked cost, price and margin per product in an Excel model and adjusted spend live.",
+"In 2020 I taught myself to design, build and run a clothing group on Roblox, with no team or budget. Then I sold it."];
+var builds=[
+["QR inventory app","1,000+ materials, located by scan.","Covers racks and bottles. Shows the exact storage location and lets staff verify inventory on the spot."],
+["Bluetooth weighing scale","A legacy scale, now digital.","I connected an old scale over Bluetooth and built an app with AI-assisted development. It replaced a manual weighing process."],
+["Perfume dispenser","A compact dispenser for perfumers.","Designed and 3D printed for perfumery businesses. I also prototyped perfume case designs."],
+["3D-printed merch store","Rs. 60,000 profit in three months.","A solo e-commerce venture. Product, pricing, ads, fulfilment and finance were all mine."],
+["Digital sales tracking","Paper to tablet at National Durbar.","I owned the move from paper sales sheets to a tablet at my family’s restaurant. The accounting team got more accurate data, faster."]];
+var jr=[
+["work","Sep 2026 – Present","Founder’s Office (Generalist)","Bulkaroma, Chennai",["Work with the founder on research, feasibility checks and implementation.","Build internal apps with Claude, from idea to working tool.","Introduced 3D printing into operations.","Manage bulk quotations and sales, and meet international clients. Coordinate export, customs and shipping documents.","Support LinkedIn and Instagram marketing, run recruitment, and negotiate with suppliers."]],
+["work","Nov 2024 – Aug 2026","Operations & Finance Generalist","National Durbar Restaurant, family-owned since 1952",["Handled daily bookkeeping, reconciliation and reporting.","Ran bank and cash reconciliation on my own.","Verified bills and invoices and caught discrepancies before they reached the books.","Turned daily sales data into Excel summaries for reporting."]],
+["venture","Mar – May 2026","Founder, 3D-printed merchandise","Independent e-commerce venture",["Built and ran it solo, 0 to 1.","Converted 10% of inbound leads into customers.","Made Rs. 60,000 profit, self-funded."]],
+["school","2022 – 2023","President, Commerce Club","Grade 12",["Led a student organisation, planning business events and competitions with real P&L accountability.","Analysed food-stall economics to decide what to run again."]],
+["venture","2020","Founder, Roblox clothing group","Design & brand",["Designed, built and ran it in school, self-taught.","Sold it for Rs. 30,000."]]];
+var sk=[
+["Finance & accounting",["Advanced Excel","SUMIFS / XLOOKUP","PivotTables","Financial modelling","TallyPrime","GST / TDS basics","Variance analysis"]],
+["Building",["Claude (vibe coding)","Internal apps","3D design & printing","DIY electronics","0-to-1 building"]],
+["Sales & marketing",["Bulk quotations","Pricing","International clients","LinkedIn","Instagram","Meta Ads","Reddit","WhatsApp"]],
+["Operations",["Vendor negotiation","Hiring","Export & customs","Problem solving","PowerPoint","Word"]]];
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
+/* stats */
+var sb=[].slice.call(document.querySelectorAll(".stat")),note=document.getElementById("statnote");
+sb.forEach(function(b){b.onclick=function(){var on=b.getAttribute("aria-pressed")=="true";
+sb.forEach(function(x){x.setAttribute("aria-pressed","false")});
+if(on){note.textContent="Tap a number to see how it happened."}else{b.setAttribute("aria-pressed","true");note.textContent=stats[b.dataset.i]}}});
+/* cards */
+var cg=document.getElementById("cards");
+builds.forEach(function(b){var c=el("button","card","<h3>"+b[0]+"<s>+</s></h3><p>"+b[1]+"</p><div class='more'>"+b[2]+"</div>");
+c.setAttribute("aria-expanded","false");c.onclick=function(){c.setAttribute("aria-expanded",c.getAttribute("aria-expanded")=="true"?"false":"true")};cg.appendChild(c)});
+/* journey */
+var tl=document.getElementById("tl"),tabs=document.getElementById("tabs");
+jr.forEach(function(j){var li=el("li","", "<time>"+j[1]+"</time><h3>"+j[2]+"</h3><div class='org'>"+j[3]+"</div><ul>"+j[4].map(function(p){return"<li>"+p+"</li>"}).join("")+"</ul>");li.dataset.t=j[0];tl.appendChild(li)});
+[["all","Everything"],["work","Work"],["venture","Ventures"],["school","School"]].forEach(function(t,i){var b=el("button","tab",t[1]);b.type="button";b.setAttribute("aria-pressed",i==0);
+b.onclick=function(){[].forEach.call(tabs.children,function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");
+[].forEach.call(tl.children,function(li){li.hidden=t[0]!="all"&&li.dataset.t!=t[0]})};tabs.appendChild(b)});
+/* skills */
+var sg=document.getElementById("skillgrid");
+sk.forEach(function(s){sg.appendChild(el("div","skill","<h3>"+s[0]+"</h3><ul class='chips'>"+s[1].map(function(c){return"<li>"+c+"</li>"}).join("")+"</ul>"))});
+/* nav highlight */
+var links=[].slice.call(document.querySelectorAll("nav ul a"));
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
+["built","journey","skills","contact"].forEach(function(id){io.observe(document.getElementById(id))})}
+/* copy email */
+var cp=document.getElementById("copy");
+cp.onclick=function(){var t="Sayeed.armar@gmail.com";
+function done(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy email"},1800)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){cp.textContent=t})}else{cp.textContent=t}};
+</script>
+</body>
+</html>
